@@ -1,3 +1,4 @@
+import './Fonts/fonts.css';
 import React, { useState } from "react";
 import { AddButton } from './styles/Button.styled';
 import { Title, Members, Header } from './styles/Header.styled';
@@ -39,6 +40,7 @@ function ShameWall() {
   };
 
   const membersCount = data.length;
+ ;
 
   return (
     <Wrapper>

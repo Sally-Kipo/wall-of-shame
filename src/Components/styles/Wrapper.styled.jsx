@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.section`
+font-family: 'Poppins', sans-serif;
 position: relative;
 width: 1180px;
 height: 493px;
