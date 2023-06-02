@@ -1,4 +1,4 @@
-import ShameWall from './ShameWall';
+import ShameWall from './Components/ShameWall';
 
 function App() {
   return (
