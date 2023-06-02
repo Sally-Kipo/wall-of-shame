@@ -50,7 +50,7 @@ export const Increase = styled.button`
 export const Total = styled.h2`
 position: absolute;
 top: 1px;
-right:320px;
+right:280px;
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 600;

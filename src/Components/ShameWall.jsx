@@ -40,7 +40,8 @@ function ShameWall() {
   };
 
   const membersCount = data.length;
- ;
+ 
+;
 
   return (
     <Wrapper>
