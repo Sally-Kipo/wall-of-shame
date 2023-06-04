@@ -14,4 +14,8 @@ export const Input = styled.input`
   padding: 10px 15px;
   margin-left: 30px;
   margin-top:10px;
+  &.error {
+    border: 2px solid red;
+    animation: shake 0.5s;
+  }
 `;

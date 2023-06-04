@@ -17,16 +17,27 @@ function ShameWall() {
       count: 0
     }
   ]);
+  const [nameError, setNameError] = useState(false);
+  const [excuseError, setExcuseError] = useState(false);
 
-  function handleNameChange(e) {
-    setName(e.target.value);
+  const handleNameChange = (e) => {
+    setName(e.target.value.trim());
+    setNameError(false);
   }
 
   const handleExcuseChange = (e) => {
-    setExcuse(e.target.value);
+    setExcuse(e.target.value.trim());
+    setExcuseError(false);
   };
 
   const handleCreate = () => {
+    if (name === "" || excuse === "") {
+      setNameError(name === "");
+      setExcuseError(excuse === "");
+     
+      return;
+    }
+    
     const newItem = { name, excuse, count: 0 };
     setData([...data, newItem]);
     setName("");
@@ -40,8 +51,6 @@ function ShameWall() {
   };
 
   const membersCount = data.length;
- 
-;
 
   return (
     <Wrapper>
@@ -53,11 +62,13 @@ function ShameWall() {
             placeholder="Name"
             value={name}
             onChange={handleNameChange}
+            className={nameError ? "error" : ""}
           />
           <Input
             placeholder="Excuse"
             value={excuse}
             onChange={handleExcuseChange}
+            className={excuseError ? "error" : ""}
           />
           <AddButton onClick={handleCreate}>Create</AddButton>
         </InputContainer>
