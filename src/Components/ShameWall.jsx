@@ -14,7 +14,7 @@ function ShameWall() {
     {
       name: "Brad Simmons",
       excuse: "Remember when you were young you shone like the sun. Shine on you",
-      count: 0
+      count: 1
     }
   ]);
   const [nameError, setNameError] = useState(false);
@@ -38,7 +38,7 @@ function ShameWall() {
       return;
     }
     
-    const newItem = { name, excuse, count: 0 };
+    const newItem = { name, excuse, count: 1 };
     setData([...data, newItem]);
     setName("");
     setExcuse("");
@@ -53,7 +53,7 @@ function ShameWall() {
   const membersCount = data.length;
 
   return (
-    <Wrapper>
+    <Wrapper style={{ overflow: "hidden" }}>
       <Header>
         <Title>Wall of shame</Title>
         <Members>{membersCount} Members</Members>
@@ -68,7 +68,7 @@ function ShameWall() {
             placeholder="Excuse"
             value={excuse}
             onChange={handleExcuseChange}
-            className={excuseError ? "error" : ""}
+            className={excuseError ? "error" : ""}trim
           />
           <AddButton onClick={handleCreate}>Create</AddButton>
         </InputContainer>
