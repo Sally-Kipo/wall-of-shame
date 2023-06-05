@@ -21,12 +21,12 @@ function ShameWall() {
   const [excuseError, setExcuseError] = useState(false);
 
   const handleNameChange = (e) => {
-    setName(e.target.value.trim());
+    setName(e.target.value);
     setNameError(false);
   }
 
   const handleExcuseChange = (e) => {
-    setExcuse(e.target.value.trim());
+    setExcuse(e.target.value);
     setExcuseError(false);
   };
 
